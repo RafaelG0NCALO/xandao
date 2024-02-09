@@ -23,7 +23,7 @@ const Section03 = () => {
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
             <LazyLoadImage effect='blur' src={lapicon} alt="" className='w-14 mb-4' />
             <p className='font-medium text-xl text-white'>
-            Design e Desenvolvimento de Sites
+            Design e Desenvolvimento de Sites completos
             </p>
           </div>
           <div className='flex flex-col justify-center p-5 max-md:order-first col-span-2 max-sm:col-span-1 h-full'>
