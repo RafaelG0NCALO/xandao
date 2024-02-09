@@ -1,6 +1,7 @@
 import React from 'react'
 import alex from '../../assets/alex.png'
 import raul from '../../assets/raul.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Section04 = () => {
   return (
@@ -16,7 +17,7 @@ const Section04 = () => {
             </div>
             <div className='flex gap-4 flex-wrap space-x-4 items-center mt-8 w-full max-w-7xl'>
                 <div className='flex-1 min-w-[300px] flex justify-start'>
-                    <img src={alex} alt="" className='object-contain ' />
+                    <LazyLoadImage effect='blur' src={alex} alt="" className='object-contain ' />
                 </div>
                 <div className='flex-1 min-w-[300px] flex justify-center flex-col'>
                     <h1 className='text-xl font-semibold text-[#4F567B] pb-5'>
@@ -54,7 +55,7 @@ const Section04 = () => {
                     </p>
                 </div>
                 <div className='flex-1 min-w-[300px] flex justify-end'>
-                    <img src={raul} alt="" className='object-contain' />
+                    <LazyLoadImage effect='blur' src={raul} alt="" className='object-contain' />
                 </div>
             </div>
     </div>

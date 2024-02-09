@@ -5,6 +5,8 @@ import videoicon from '../../assets/videoicon.png'
 import penicon from '../../assets/penicon.png'
 import socialicon from '../../assets/socialicon.png'
 import payicon from '../../assets/payicon.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Section03 = () => {
   return (
@@ -13,13 +15,13 @@ const Section03 = () => {
       
         <div className='grid max-sm:grid-cols-1 max-md:grid-cols-2 grid-cols-4 items-center'>
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
-            <img src={charticon} alt="" className='w-14 mb-4' />
+            <LazyLoadImage effect='blur' src={charticon} alt="" className='w-14 mb-4' />
             <p className='font-medium text-xl text-white'>
             Otimização para Mecanismos de Busca
             </p>
           </div>
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
-            <img src={lapicon} alt="" className='w-14 mb-4' />
+            <LazyLoadImage effect='blur' src={lapicon} alt="" className='w-14 mb-4' />
             <p className='font-medium text-xl text-white'>
             Design e Desenvolvimento de Sites
             </p>
@@ -34,25 +36,25 @@ const Section03 = () => {
 
         <div className='grid max-sm:grid-cols-1 max-md:grid-cols-2 grid-cols-4 items-center'>
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
-            <img src={videoicon} alt="" className='w-14 mb-4' />
+            <LazyLoadImage effect='blur' src={videoicon} alt="" className='w-14 mb-4' />
             <p className='font-medium text-xl text-white'>
             Edição e Produção de Vídeos
             </p>
           </div>
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
-            <img src={penicon} alt="" className='w-14 mb-4' />
+            <LazyLoadImage effect='blur' src={penicon} alt="" className='w-14 mb-4' />
             <p className='font-medium text-xl text-white mb-5'>
             Redação de Conteúdo
             </p>
           </div>
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
-            <img src={socialicon} alt="" className='w-14 mb-4' />
+            <LazyLoadImage effect='blur' src={socialicon} alt="" className='w-14 mb-4' />
             <p className='font-medium text-xl text-white'>
             Social media Marketing
             </p>
           </div>
           <div className='h-52 flex flex-col p-4 justify-center bg-[#1E2242] rounded-md m-2'>
-            <img src={payicon} alt="" className='w-10 mb-4' />
+            <LazyLoadImage effect='blur' src={payicon} alt="" className='w-10 mb-4' />
             <p className='font-medium text-xl text-white'>
             Pay per click (PPC)
             </p>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import banner from '../../assets/10anos.jpeg'
 import MarqueeComponent from '../Marquee'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Section01 = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -14,8 +16,6 @@ const Section01 = () => {
         method: 'POST',
         body: formData,
       });
-    
-       
 
       console.log('Resposta do servidor:', response);
     } catch (error) {
@@ -75,7 +75,7 @@ const Section01 = () => {
         </div>
 
         <div className='w-full overflow-hidden rounded-tl-[60px] ml-2 relative'>
-          <img src={banner} alt="" className='w-full h-full object-cover' />
+          <LazyLoadImage effect="blur" src={banner} alt="" className='w-full h-full object-cover' />
           <div className='bg-gradient-to-t to-transparent from-[#14172C] absolute bottom-0 h-1/4 left-0 w-full' />
           <div className='bg-gradient-to-l to-transparent from-[#14172c] absolute bottom-0 h-full right-0 w-1/4' />
         </div>

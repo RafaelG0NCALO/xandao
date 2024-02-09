@@ -3,6 +3,7 @@ import camIcon from '../../assets/camIcon.png'
 import chatIcon from '../../assets/chatIcon.png'
 import usersIcon from '../../assets/UsersIcon.png'
 import wave from '../../assets/wave.png'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Section02 = () => {
   return (
@@ -20,7 +21,7 @@ const Section02 = () => {
                 <div className='flex max-lg:flex-col justify-between w-full max-w-7xl m-auto items-center'>
                     <div className='w-full max-lg:max-w-lg max-w-[250px] h-96 relative text-center flex justify-center flex-col items-center'>
                         <div className='w-24 h-24 absolute z-20 top-0 rounded-lg bg-[#efefef] flex items-center justify-center'>
-                            <img src={camIcon} alt="" />
+                            <LazyLoadImage effect="blur" src={camIcon} alt="" />
                         </div>
                         <img src={wave} alt="" className='absolute max-lg:hidden z-0 top-14 left-56 w-full -translate-y-10' />
                         <h1 className='text-lg font-semibold py-5'>PRODUÇÃO DE VÍDEOS</h1>
@@ -29,7 +30,7 @@ const Section02 = () => {
 
                     <div className='w-full max-lg:max-w-lg max-w-[250px] h-96 relative text-center flex justify-center flex-col items-center'>
                         <div className='w-24 h-24 absolute z-20 top-0 rounded-lg bg-[#efefef] flex items-center justify-center'>
-                            <img src={chatIcon} alt="" />
+                            <LazyLoadImage effect="blur" src={chatIcon} alt="" />
                         </div>
                         <h1 className='text-lg font-semibold py-5'>PRODUÇÃO DE VÍDEOS</h1>
                         <p>A Fábrica de Autoridades Digitais inova ao criar vídeos simulando podcasts, proporcionando uma apresentação envolvente e acessível para plataformas digitais.</p>
@@ -37,7 +38,7 @@ const Section02 = () => {
 
                     <div className='w-full max-lg:max-w-lg max-w-[250px] h-96 relative text-center flex justify-center flex-col items-center'>
                         <div className='w-24 h-24 absolute z-20 top-0 rounded-lg bg-[#efefef] flex items-center justify-center'>
-                            <img src={usersIcon} alt="" />
+                            <LazyLoadImage effect="blur" src={usersIcon} alt="" />
                         </div>
                         <img src={wave} alt="" className='absolute max-lg:hidden z-0 top-14 right-56 w-full -translate-y-10' />
                         <h1 className='text-lg font-semibold py-5'>PRODUÇÃO DE VÍDEOS</h1>
