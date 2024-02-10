@@ -12,7 +12,7 @@ const Section01 = () => {
     const formData = new FormData(event.target);
     setFormSubmitted(true);
     try {
-      const response = await fetch('https://formsubmit.co/wishprimesuporte@gmail.com', {
+      const response = await fetch('https://formsubmit.co/contato@agenciacarcara.com.br', {
         method: 'POST',
         body: formData,
       });
