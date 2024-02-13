@@ -3,24 +3,31 @@ import banner from '../../assets/10anos.jpeg'
 import MarqueeComponent from '../Marquee'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import "react-lazy-load-image-component/src/effects/blur.css";
+import emailjs from '@emailjs/browser';
 
 const Section01 = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleSubmit = async (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    const formData = new FormData(event.target);
-    setFormSubmitted(true);
-    try {
-      const response = await fetch('https://formsubmit.co/contato@agenciacarcara.com.br', {
-        method: 'POST',
-        body: formData,
-      });
-
-      console.log('Resposta do servidor:', response);
-    } catch (error) {
-      console.error('Erro ao enviar formulário:', error);
+    const formData = {
+      from_name: name,
+      email: email
     }
+
+    emailjs.send('service_c90gbof', 'template_lj8wg2f', formData, 'TW1knwwtxwYF0N0i3')
+    .then((response)=>{
+      console.log("EMAIL ENVIADO", response.status, response.text)
+      setFormSubmitted(true)
+      setEmail('')
+      setName('')
+    }, (err)=>{
+      console.log("ERRO", err)
+    })
+
   };
 
   return (
@@ -51,12 +58,16 @@ const Section01 = () => {
                 type="text"
                 required
                 name="name"
+                onChange={(e) => setName(e.target.value)}
+                value={name}
                 className='h-14 w-full p-5 text-gray-100 rounded-md mt-4 border-2 border-[#BFBFBF] bg-[#14172C]'
                 placeholder="Nome"
               />
               <input
                 type="text"
                 required
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
                 name="email"
                 className='h-14 w-full p-5 text-gray-100 rounded-md mt-4 border-2 border-[#BFBFBF] bg-[#14172C]'
                 placeholder="Email"

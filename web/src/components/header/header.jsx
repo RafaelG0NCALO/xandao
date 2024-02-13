@@ -50,7 +50,7 @@ const Header = () => {
                     
                 <div className='flex items-center justify-between w-full'>
                     <img src={logo} alt="" className='w-48' />
-                    <div onClick={handleToggleNav} className='hidden cursor-pointer max-md:block hover:bg-gray-300  rounded-md'>
+                    <div onClick={handleToggleNav} className='hidden cursor-pointer max-md:block hover:bg-[#12152d]  rounded-md'>
                         {toggleNav ? <X size={30}/> : <List size={30}/> }
                     </div>
                 </div>
@@ -58,7 +58,7 @@ const Header = () => {
                 <div ref={menuRef} className={`max-md:pt-5 max-md:w-full flex max-md:items-end max-md:justify-end max-md:flex-col gap-2 justify-around md:flex ${ toggleNav ? "visible" : "hidden"}`}>
                     <div className='w-full m-auto md:max-w-lg max-md:flex-col flex justify-around gap-2'>
                         {links.map((link, index) => 
-                            <Link  key={index} to='' className='w-24 hover:border-gray-100 border-transparent border-b-2 py-2 max-md:py-4 max-md:justify-start max-md:pl-4 max-md:bg-gradient-to-r from-[#dcdbdb] to-gray-800 max-md:w-full flex  justify-center'>
+                            <Link  key={index} to='' className='w-24 hover:border-gray-100 border-transparent border-b-2 py-2 max-md:py-4 max-md:justify-start max-md:pl-4 max-md:bg-gradient-to-r from-[#14172C] to-[#010311] max-md:w-full flex  justify-center'>
                                 <p>{link.name}</p>
                             </Link>
                         )}

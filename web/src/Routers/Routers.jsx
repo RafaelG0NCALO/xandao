@@ -11,7 +11,7 @@ const Routers = () => {
   const location = useLocation();
   useEffect(() => {
     const delay = setTimeout(() => {
-      if (location.pathname === '/home') {
+      if (location.pathname === '/') {
         setIsLoadingHome(false);
       } else if (location.pathname === '/contato'){
         setIsLoadingContato(false)
@@ -23,11 +23,8 @@ const Routers = () => {
   return (
     <Suspense fallback={<Loading/>}>
       <Routes>
-        <Route 
-          path="/" 
-          element={<Navigate to="home" />} />
         <Route
-          path="home"
+          path="/"
           element={<Suspense fallback={<Loading />}>{isLoadingHome ? <Loading /> : <Home />}</Suspense>} />
         <Route
           path="contato"
